@@ -1,4 +1,4 @@
-﻿namespace WinInjArk.Client
+﻿namespace WinInjArk.Client.DomainObjects.ListForm
 {
 	partial class ListForm
 	{

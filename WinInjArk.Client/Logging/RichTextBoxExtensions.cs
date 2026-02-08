@@ -11,11 +11,7 @@ internal static class RichTextBoxExtensions
 		this RichTextBox richTextBox,
 		IEnumerable<Log> logs)
 	{
-		richTextBox.Text = "";
-		foreach (var log in logs)
-		{
-			richTextBox.AppendText(log.Text);
-			richTextBox.AppendText(Environment.NewLine);
-		}
+		var text = string.Join(Environment.NewLine, logs.Select(log => log.Text));
+		richTextBox.Text = text;
 	}
 }

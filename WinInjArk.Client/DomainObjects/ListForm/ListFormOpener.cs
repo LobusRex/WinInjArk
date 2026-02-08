@@ -1,4 +1,4 @@
-﻿namespace WinInjArk.Client.DomainObjectList;
+﻿namespace WinInjArk.Client.DomainObjects.ListForm;
 
 internal class ListFormOpener
 {
@@ -15,4 +15,3 @@ internal class ListFormOpener
 		listForm.Show();
 	}
 }
-

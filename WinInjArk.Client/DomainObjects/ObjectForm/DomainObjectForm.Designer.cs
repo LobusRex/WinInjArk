@@ -1,4 +1,4 @@
-﻿namespace WinInjArk.Client
+﻿namespace WinInjArk.Client.DomainObjects.ObjectForm
 {
 	partial class DomainObjectForm
 	{

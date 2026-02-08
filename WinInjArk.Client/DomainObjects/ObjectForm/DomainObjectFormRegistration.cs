@@ -2,7 +2,7 @@
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Logging;
 
-namespace WinInjArk.Client.DomainObjects.Forms;
+namespace WinInjArk.Client.DomainObjects.ObjectForm;
 
 internal static class DomainObjectFormRegistration
 {

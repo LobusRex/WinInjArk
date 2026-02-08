@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using WinInjArk.Client.DomainObjectList;
-using WinInjArk.Client.DomainObjects.Forms;
+using WinInjArk.Client.DomainObjects.ListForm;
+using WinInjArk.Client.DomainObjects.ObjectForm;
 using WinInjArk.Client.Logging;
 
 namespace WinInjArk.Client;

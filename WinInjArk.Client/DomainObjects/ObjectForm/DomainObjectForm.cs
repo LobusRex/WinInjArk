@@ -1,6 +1,4 @@
-﻿using WinInjArk.Client.DomainObjects;
-
-namespace WinInjArk.Client;
+﻿namespace WinInjArk.Client.DomainObjects.ObjectForm;
 
 internal partial class DomainObjectForm : Form
 {

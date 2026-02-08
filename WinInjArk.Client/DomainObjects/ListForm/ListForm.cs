@@ -1,8 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
-using WinInjArk.Client.DomainObjects;
-using WinInjArk.Client.DomainObjects.Forms;
+using WinInjArk.Client.DomainObjects.ObjectForm;
 
-namespace WinInjArk.Client;
+namespace WinInjArk.Client.DomainObjects.ListForm;
 
 internal partial class ListForm : Form
 {

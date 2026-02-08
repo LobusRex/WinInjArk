@@ -1,5 +1,5 @@
 using Microsoft.Extensions.Logging;
-using WinInjArk.Client.DomainObjectList;
+using WinInjArk.Client.DomainObjects.ListForm;
 using WinInjArk.Client.Logging;
 
 namespace WinInjArk.Client;

@@ -1,8 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
-using WinInjArk.Client.DomainObjects;
 
-namespace WinInjArk.Client.DomainObjectList;
+namespace WinInjArk.Client.DomainObjects.ListForm;
 
 internal static class ListFormRegistration
 {

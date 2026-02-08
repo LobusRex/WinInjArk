@@ -23,10 +23,10 @@
 			// 
 			richTextBoxLogs.Dock = DockStyle.Left;
 			richTextBoxLogs.Location = new Point(0, 0);
-			richTextBoxLogs.MinimumSize = new Size(200, 0);
+			richTextBoxLogs.MinimumSize = new Size(400, 0);
 			richTextBoxLogs.Name = "richTextBoxLogs";
 			richTextBoxLogs.ReadOnly = true;
-			richTextBoxLogs.Size = new Size(200, 450);
+			richTextBoxLogs.Size = new Size(400, 450);
 			richTextBoxLogs.TabIndex = 0;
 			richTextBoxLogs.Text = "";
 			richTextBoxLogs.WordWrap = false;
@@ -34,7 +34,7 @@
 			// buttonOpenDomainObjects
 			// 
 			buttonOpenDomainObjects.AutoSize = true;
-			buttonOpenDomainObjects.Location = new Point(206, 12);
+			buttonOpenDomainObjects.Location = new Point(406, 12);
 			buttonOpenDomainObjects.Name = "buttonOpenDomainObjects";
 			buttonOpenDomainObjects.Size = new Size(150, 25);
 			buttonOpenDomainObjects.TabIndex = 1;
