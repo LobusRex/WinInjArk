@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using WinInjArk.Client.DomainObjectList;
+using WinInjArk.Client.DomainObjects.Forms;
 using WinInjArk.Client.Logging;
 
 namespace WinInjArk.Client;
@@ -16,6 +17,7 @@ internal static class WinInjArkRegistration
 		services.AddTransient<MainForm>();
 
 		services.AddListForm();
+		services.AddDomainObjectForm();
 
 		return services;
 	}

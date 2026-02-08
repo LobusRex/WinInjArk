@@ -1,20 +1,24 @@
 ﻿using Microsoft.Extensions.Logging;
 using WinInjArk.Client.DomainObjects;
+using WinInjArk.Client.DomainObjects.Forms;
 
 namespace WinInjArk.Client;
 
 internal partial class ListForm : Form
 {
 	private readonly ILogger<ListForm> _logger;
-	private readonly DomainObjectService _domainObjectService;
+	private readonly IDomainObjectService _domainObjectService;
+	private readonly DomainObjectFormOpener? _domainObjectFormOpener;
 
 	public ListForm(
 		ILogger<ListForm> logger,
-		DomainObjectService domainObjectService)
+		IDomainObjectService domainObjectService,
+		DomainObjectFormOpener? domainObjectFormOpener = null)
 	{
 		InitializeComponent();
 		_logger = logger;
 		_domainObjectService = domainObjectService;
+		_domainObjectFormOpener = domainObjectFormOpener;
 		_logger.LogInformation($"Constructed {nameof(ListForm)}");
 	}
 
@@ -37,6 +41,15 @@ internal partial class ListForm : Form
 
 		var item = listBox1.Items[index];
 
-		// TODO: use item to open another form.
+		if (item is not DomainObject domainObject)
+			return;
+
+		if (_domainObjectFormOpener is null)
+		{
+			_logger.LogInformation($"There is no {nameof(DomainObjectFormOpener)}.");
+			return;
+		}
+
+		_domainObjectFormOpener.Open(domainObject.Id);
 	}
 }

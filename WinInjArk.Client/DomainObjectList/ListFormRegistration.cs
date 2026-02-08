@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using WinInjArk.Client.DomainObjects;
 
 namespace WinInjArk.Client.DomainObjectList;
@@ -16,7 +17,7 @@ internal static class ListFormRegistration
 					formFactory: () =>
 						serviceProvider.GetRequiredService<ListForm>()));
 
-		services.AddSingleton<DomainObjectService>();
+		services.TryAddSingleton<IDomainObjectService, DomainObjectService>();
 
 		return services;
 	}

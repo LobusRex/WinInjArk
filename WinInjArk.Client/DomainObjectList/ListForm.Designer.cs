@@ -49,7 +49,7 @@
 			ClientSize = new Size(800, 450);
 			Controls.Add(listBox1);
 			Name = "ListForm";
-			Text = "ListForm";
+			Text = "Domain Objects";
 			Load += listForm_Load;
 			ResumeLayout(false);
 		}
