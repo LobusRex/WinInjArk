@@ -1,4 +1,5 @@
 using Microsoft.Extensions.Logging;
+using WinInjArk.Client.DomainObjectList;
 using WinInjArk.Client.Logging;
 
 namespace WinInjArk.Client;
@@ -7,16 +8,18 @@ internal partial class MainForm : Form
 {
 	private readonly IFormLogSink _logProvider;
 	private readonly ILogger<MainForm> _logger;
+	private readonly ListFormOpener _listFormOpener;
 
 	public MainForm(
 		IFormLogSink logProvider,
-		ILogger<MainForm> logger)
+		ILogger<MainForm> logger,
+		ListFormOpener listFormOpener)
 	{
 		InitializeComponent();
 
 		_logProvider = logProvider;
 		_logger = logger;
-
+		_listFormOpener = listFormOpener;
 		_logger.LogInformation("MainForm constructor.");
 	}
 
@@ -34,6 +37,13 @@ internal partial class MainForm : Form
 	{
 		var logs = _logProvider.GetAllLogs();
 		richTextBoxLogs.WriteLogs(logs);
+	}
+
+	private void buttonOpenDomainObjects_Click(object sender, EventArgs e)
+	{
+		_logger.LogInformation("Clicked list form button.");
+
+		_listFormOpener.Open();
 	}
 
 	/// <summary>

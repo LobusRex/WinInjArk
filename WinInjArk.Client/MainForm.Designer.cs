@@ -16,6 +16,7 @@
 		private void InitializeComponent()
 		{
 			richTextBoxLogs = new RichTextBox();
+			buttonOpenDomainObjects = new Button();
 			SuspendLayout();
 			// 
 			// richTextBoxLogs
@@ -28,21 +29,36 @@
 			richTextBoxLogs.Size = new Size(200, 450);
 			richTextBoxLogs.TabIndex = 0;
 			richTextBoxLogs.Text = "";
+			richTextBoxLogs.WordWrap = false;
+			// 
+			// buttonOpenDomainObjects
+			// 
+			buttonOpenDomainObjects.AutoSize = true;
+			buttonOpenDomainObjects.Location = new Point(206, 12);
+			buttonOpenDomainObjects.Name = "buttonOpenDomainObjects";
+			buttonOpenDomainObjects.Size = new Size(150, 25);
+			buttonOpenDomainObjects.TabIndex = 1;
+			buttonOpenDomainObjects.Text = "Open List Form";
+			buttonOpenDomainObjects.UseVisualStyleBackColor = true;
+			buttonOpenDomainObjects.Click += buttonOpenDomainObjects_Click;
 			// 
 			// MainForm
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(800, 450);
+			Controls.Add(buttonOpenDomainObjects);
 			Controls.Add(richTextBoxLogs);
 			Name = "MainForm";
 			Text = "Main form of the WinInjArk client";
 			Load += mainForm_Load;
 			ResumeLayout(false);
+			PerformLayout();
 		}
 
 		#endregion
 
 		private RichTextBox richTextBoxLogs;
+		private Button buttonOpenDomainObjects;
 	}
 }

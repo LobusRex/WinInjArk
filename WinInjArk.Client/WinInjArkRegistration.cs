@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
+using WinInjArk.Client.DomainObjectList;
 using WinInjArk.Client.Logging;
 
 namespace WinInjArk.Client;
@@ -9,8 +9,13 @@ internal static class WinInjArkRegistration
 	public static IServiceCollection AddWinInjArkClientServices(
 		this IServiceCollection services)
 	{
-		services.AddTransient<MainForm>();
+		// TODO: Look at this registration again.
+		// Both the logging sink and MainForm requires this.
+		// Maybe TryAddSingleton in both cases?
 		services.AddSingleton<IFormLogSink, FormLogSink>();
+		services.AddTransient<MainForm>();
+
+		services.AddListForm();
 
 		return services;
 	}
