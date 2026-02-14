@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using Microsoft.Extensions.Logging;
 
 namespace WinInjArk.Client.DomainObjects.ListForm;
 
@@ -13,8 +14,9 @@ internal static class ListFormRegistration
 		services.AddSingleton<ListFormOpener>(
 			implementationFactory: serviceProvider =>
 				new ListFormOpener(
-					formFactory: () =>
-						serviceProvider.GetRequiredService<ListForm>()));
+					logger: serviceProvider.GetRequiredService<ILogger<ListFormOpener>>(),
+					formFactory: serviceProvider2 => serviceProvider2.GetRequiredService<ListForm>(),
+					serviceScopeFactory: serviceProvider.GetRequiredService<IServiceScopeFactory>()));
 
 		services.TryAddSingleton<IDomainObjectService, DomainObjectService>();
 

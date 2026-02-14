@@ -13,13 +13,14 @@ internal static class DomainObjectFormRegistration
 			implementationFactory: serviceProvider =>
 				new DomainObjectFormOpener(
 					logger: serviceProvider.GetRequiredService<ILogger<DomainObjectFormOpener>>(),
-					formFactory: (id) =>
+					formFactory: (serviceProvider2, id) =>
 					{
 						var form = new DomainObjectForm(
 							objectId: id,
-							domainObjectService: serviceProvider.GetRequiredService<IDomainObjectService>());
+							domainObjectService: serviceProvider2.GetRequiredService<IDomainObjectService>());
 						return form;
-					}));
+					},
+					serviceProvider.GetRequiredService<IServiceScopeFactory>()));
 						
 
 		services.TryAddSingleton<IDomainObjectService, DomainObjectService>();
