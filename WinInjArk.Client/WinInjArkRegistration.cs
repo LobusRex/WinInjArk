@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using WinInjArk.Client.Computer;
 using WinInjArk.Client.DomainObjects.ListForm;
 using WinInjArk.Client.DomainObjects.ObjectForm;
 using WinInjArk.Client.Logging;
@@ -19,6 +20,8 @@ internal static class WinInjArkRegistration
 		services.AddListForm();
 		services.AddDomainObjectForm();
 
-		return services;
+        services.AddComputer();
+
+        return services;
 	}
 }

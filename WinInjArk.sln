@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36915.13 d17.14
+# Visual Studio Version 18
+VisualStudioVersion = 18.3.11512.155 d18.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinInjArk.Client", "WinInjArk.Client\WinInjArk.Client.csproj", "{EB8C7513-5B15-4FC1-8A23-8D17E1D6835A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinInjArk.Experimentation.Scopes", "WinInjArk.Experimentation.Scopes\WinInjArk.Experimentation.Scopes.csproj", "{D71B248F-2716-44E1-8938-4017F32AE26A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinInjArk", "WinInjArk\WinInjArk.csproj", "{70CA541F-78C8-4413-AB20-947C7D5CBE4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{EB8C7513-5B15-4FC1-8A23-8D17E1D6835A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB8C7513-5B15-4FC1-8A23-8D17E1D6835A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB8C7513-5B15-4FC1-8A23-8D17E1D6835A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D71B248F-2716-44E1-8938-4017F32AE26A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D71B248F-2716-44E1-8938-4017F32AE26A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D71B248F-2716-44E1-8938-4017F32AE26A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D71B248F-2716-44E1-8938-4017F32AE26A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70CA541F-78C8-4413-AB20-947C7D5CBE4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70CA541F-78C8-4413-AB20-947C7D5CBE4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70CA541F-78C8-4413-AB20-947C7D5CBE4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70CA541F-78C8-4413-AB20-947C7D5CBE4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
