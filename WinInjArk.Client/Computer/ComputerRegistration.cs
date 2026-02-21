@@ -3,6 +3,7 @@ using WinInjArk.Client.Computer.Desktop;
 using WinInjArk.Client.Computer.Email;
 using WinInjArk.Client.Computer.Files;
 using WinInjArk.Client.Computer.Settings;
+using WinInjArk.Client.Computer.TextEditor;
 
 namespace WinInjArk.Client.Computer;
 
@@ -14,6 +15,7 @@ internal static class ComputerRegistration
         services.AddFiles();
         services.AddEmail();
         services.AddSettings();
+        services.AddTextEditor();
 
         return services;
     }

@@ -28,18 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            listBoxFiles = new ListBox();
             SuspendLayout();
+            // 
+            // listBoxFiles
+            // 
+            listBoxFiles.Dock = DockStyle.Fill;
+            listBoxFiles.FormattingEnabled = true;
+            listBoxFiles.ItemHeight = 15;
+            listBoxFiles.Location = new Point(0, 0);
+            listBoxFiles.Name = "listBoxFiles";
+            listBoxFiles.Size = new Size(329, 450);
+            listBoxFiles.TabIndex = 0;
+            listBoxFiles.MouseDoubleClick += listBoxFiles_MouseDoubleClick;
             // 
             // FilesForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(329, 450);
+            Controls.Add(listBoxFiles);
             Name = "FilesForm";
             Text = "Files";
+            Load += filesForm_Load;
             ResumeLayout(false);
         }
 
         #endregion
+
+        private ListBox listBoxFiles;
     }
 }

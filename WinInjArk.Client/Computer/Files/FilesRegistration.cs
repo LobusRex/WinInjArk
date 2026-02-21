@@ -12,6 +12,8 @@ internal static class FilesRegistration
         services.AddSingleton<IFormFactory<FilesForm>, FilesFormFactory>();
         services.AddSingleton<AnyNumberOf_FormOpener<FilesForm>>();
 
+        services.AddScoped<IFileSystemService, FileSystemService>();
+
         return services;
     }
 }

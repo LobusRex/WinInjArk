@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using WinInjArk.Forms;
 
 namespace WinInjArk;
 
@@ -17,7 +18,7 @@ public class OneOfEach_FormOpener<TForm> where TForm : Form
 		IServiceScope Scope);
 	private readonly List<FormIdentityScope> _instances = [];
 
-	public OneOfEach_FormOpener(
+	private OneOfEach_FormOpener(
 		ILogger<OneOfEach_FormOpener<TForm>> logger,
 		Func<IServiceProvider, FormIdentity, TForm> formFactory,
 		IServiceScopeFactory serviceScopeFactory)
@@ -31,7 +32,20 @@ public class OneOfEach_FormOpener<TForm> where TForm : Form
 		_serviceScopeFactory = serviceScopeFactory;
 	}
 
-	public void Open(FormIdentity formIdentity)
+	public OneOfEach_FormOpener(
+        ILogger<OneOfEach_FormOpener<TForm>> logger,
+        IServiceScopeFactory serviceScopeFactory,
+        IIDentityFormFactory<TForm> formFactory)
+	: this(
+		  logger,
+		  formFactory.Create,
+		  serviceScopeFactory)
+	{
+
+	}
+
+
+    public void Open(FormIdentity formIdentity)
 	{
 		if (_instances.Any(i => i.Identity == formIdentity)) // Don't think this works...
 		{
